@@ -28,7 +28,7 @@ jobs:
 
       - name: Lint docstrings
         run: |
-          pylint --disable=all --enable=pylint.extensions.docparams $(git ls-files '*.py')
+          pylint --docstring-convention=numpy $(git ls-files '*.py')
 
       - name: Raise error if code is not correctly formatted
         run: |
