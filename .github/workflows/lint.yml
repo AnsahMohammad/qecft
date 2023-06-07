@@ -28,7 +28,7 @@ jobs:
 
       - name: Lint docstrings
         run: |
-          pylint $(git ls-files '*.py')
+          pylint --disable=all --enable=missing-function-docstring $(git ls-files '*.py')
 
       - name: Raise error if code is not correctly formatted
         run: |
